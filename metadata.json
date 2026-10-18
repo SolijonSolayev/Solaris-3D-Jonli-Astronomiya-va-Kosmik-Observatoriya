@@ -1,0 +1,8 @@
+{
+  "name": "Solaris 3D: Jonli Astronomiya va Kosmik Observatoriya",
+  "description": "Real vaqt rejimida Yer, Quyosh va Oy harakati, subsolyar nuqta, kunduz/tun terminatori, osmon sferasi hamda to'liq tutilish optik effektlari (Diamond Ring) interaktiv 3D vizualizatori.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
