@@ -129,6 +129,3 @@ Ushbu loyiha hozircha aniq litsenziya fayliga ega bo‘lmagan bo‘lishi mumkin.
 
 Loyiha egasi va hissa qo‘shuvchilar tomonidan rivojlantirilmoqda.
 
----
-
-Agar xohlasangiz, men README ni qisqartirilgan "landing" versiyasini yoki inglizcha tarjimasini ham push qilib bera olaman.
