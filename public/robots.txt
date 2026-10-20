@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://solaris3d.uz/sitemap.xml
