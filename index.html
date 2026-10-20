@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#050505" />
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <meta name="googlebot" content="index,follow" />
-    <meta name="description" content="Solaris 3D — jonli astronomiya, kosmik observatoriya va 3D simulyatsiya platformasi. Quyosh tutilishi, osmon sferasi, telemetriya va ilmiy ma'lumotlarni real vaqt rejimida kuzatib boring." />
+    <meta name="description" content="Solaris 3D — jonli astronomiya, kosmik observatoriya va 3D simulyatsiya platformasi. Quyosh tutilishi, osmon sferasi, telemetriya va ilmiy ma'lumotlarni real vaqt rejimida kuzatib borish imkonini beradi." />
     <meta name="trustpilot-one-time-domain-verification-id" content="35d031c2-64b1-43e4-8cd9-141a6dccd562"/>
     <meta name="keywords" content="Solaris 3D, jonli astronomiya, kosmik observatoriya, quyosh tutilishi, 3D simulyatsiya, astronomiya, observatoriya, uzbekistan" />
     <title>Solaris 3D | Jonli Astronomiya va Kosmik Observatoriya</title>
@@ -14,7 +14,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://solaris3d.uz/" />
     <meta property="og:title" content="Solaris 3D | Jonli Astronomiya va Kosmik Observatoriya" />
-    <meta property="og:description" content="Solaris 3D — jonli astronomiya, kosmik observatoriya va 3D simulyatsiya platformasi. Quyosh tutilishi, osmon sferasi, telemetriya va ilmiy ma'lumotlarni real vaqt rejimida kuzatib boring." />
+    <meta property="og:description" content="Solaris 3D — jonli astronomiya, kosmik observatoriya va 3D simulyatsiya platformasi. Quyosh tutilishi, osmon sferasi, telemetriya va ilmiy ma'lumotlarni real vaqt rejimida kuzatib borish imkonini beradi." />
     <meta property="og:site_name" content="Solaris 3D" />
     <meta property="og:image" content="https://solaris3d.uz/og-image.svg" />
     <meta property="og:image:alt" content="Solaris 3D — Jonli Astronomiya va Kosmik Observatoriya" />
@@ -27,12 +27,71 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      .trustpilot-collector-shell {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        width: min(320px, calc(100vw - 24px));
+        z-index: 50;
+        pointer-events: auto;
+      }
+
+      .trustpilot-collector-shell .trustpilot-widget {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 52px;
+        border-radius: 16px !important;
+        overflow: hidden;
+        background: rgba(15, 23, 42, 0.78) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        box-shadow: 0 20px 45px rgba(2, 6, 23, 0.45);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+
+      .trustpilot-collector-shell .trustpilot-widget a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #f8fafc;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      @media (max-width: 640px) {
+        .trustpilot-collector-shell {
+          right: 12px;
+          bottom: 12px;
+          width: min(280px, calc(100vw - 20px));
+        }
+      }
+    </style>
     <!-- TrustBox script -->
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
     <!-- End TrustBox script -->
   </head>
   <body class="bg-[#050505] text-slate-100 antialiased selection:bg-rose-500/30 selection:text-rose-200">
     <div id="root"></div>
+
+    <div class="trustpilot-collector-shell" aria-label="Trustpilot review collector">
+      <div class="trustpilot-widget"
+        data-locale="en-US"
+        data-template-id="56278e9abfbbba0bdcd568bc"
+        data-businessunit-id="6ad794093d15140cc2642662"
+        data-style-height="52px"
+        data-style-width="100%"
+      >
+        <a href="https://www.trustpilot.com/review/solaris3d.uz" target="_blank" rel="noopener noreferrer">Trustpilot</a>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
