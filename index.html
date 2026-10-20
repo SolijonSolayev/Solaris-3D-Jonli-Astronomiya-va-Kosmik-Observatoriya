@@ -28,43 +28,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-      .trustpilot-badge {
+      .trustpilot-floating-badge {
         position: fixed;
         right: 18px;
         bottom: 18px;
         z-index: 50;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 18px;
-        min-height: 42px;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.22);
-        background: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-        box-shadow: none;
-        transition: border-color 0.2s ease, transform 0.2s ease;
       }
 
-      .trustpilot-badge:hover {
-        border-color: rgba(255, 255, 255, 0.38);
-        transform: translateY(-1px);
-      }
-
-      .trustpilot-badge a {
+      .trustpilot-floating-badge a {
         display: inline-flex;
         align-items: center;
         gap: 10px;
+        padding: 10px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.02);
         color: #f8fafc;
         text-decoration: none;
         font-size: 14px;
         font-weight: 600;
         letter-spacing: 0.01em;
         white-space: nowrap;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
       }
 
-      .trustpilot-badge .star {
+      .trustpilot-floating-badge a:hover {
+        border-color: rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 0.04);
+        transform: translateY(-1px);
+      }
+
+      .trustpilot-floating-badge .tp-mark {
         width: 12px;
         height: 12px;
         display: inline-block;
@@ -74,15 +70,15 @@
       }
 
       @media (max-width: 640px) {
-        .trustpilot-badge {
+        .trustpilot-floating-badge {
           right: 12px;
           bottom: 12px;
-          padding: 0 14px;
-          min-height: 38px;
         }
 
-        .trustpilot-badge a {
+        .trustpilot-floating-badge a {
+          padding: 9px 12px;
           font-size: 12px;
+          gap: 8px;
         }
       }
     </style>
@@ -90,10 +86,10 @@
   <body class="bg-[#050505] text-slate-100 antialiased selection:bg-rose-500/30 selection:text-rose-200">
     <div id="root"></div>
 
-    <div class="trustpilot-badge" aria-label="Trustpilot review">
+    <div class="trustpilot-floating-badge" aria-label="Trustpilot review badge">
       <a href="https://www.trustpilot.com/review/solaris3d.uz" target="_blank" rel="noopener noreferrer">
         <span>Review us on</span>
-        <span class="star" aria-hidden="true"></span>
+        <span class="tp-mark" aria-hidden="true"></span>
         <span>Trustpilot</span>
       </a>
     </div>
