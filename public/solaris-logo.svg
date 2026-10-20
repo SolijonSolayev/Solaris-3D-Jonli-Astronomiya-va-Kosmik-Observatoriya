@@ -1,0 +1,100 @@
+<svg width="900" height="500" viewBox="0 0 900 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="silver" x1="180" y1="70" x2="520" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FDFEFF"/>
+      <stop offset="0.18" stop-color="#D9E4F7"/>
+      <stop offset="0.52" stop-color="#F4F8FF"/>
+      <stop offset="0.8" stop-color="#AABAD1"/>
+      <stop offset="1" stop-color="#F8F9FF"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="230" y1="160" x2="620" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE9B0"/>
+      <stop offset="0.4" stop-color="#F7C86A"/>
+      <stop offset="1" stop-color="#E58B1F"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="410" y1="90" x2="670" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#081A31"/>
+      <stop offset="0.24" stop-color="#0B2B4B"/>
+      <stop offset="0.55" stop-color="#0B1933"/>
+      <stop offset="1" stop-color="#010914"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(530 210) rotate(90) scale(210 210)">
+      <stop offset="0" stop-color="#9ED7FF" stop-opacity="0.95"/>
+      <stop offset="0.38" stop-color="#2E8DFF" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#02101D" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#9AD4FF" flood-opacity="0.75"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#B6D8FF" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g opacity="0.9">
+    <circle cx="148" cy="84" r="2.3" fill="#F5F9FF"/>
+    <circle cx="93" cy="150" r="1.7" fill="#F5F9FF"/>
+    <circle cx="315" cy="56" r="2.5" fill="#8FD0FF"/>
+    <circle cx="662" cy="92" r="2.2" fill="#F5F9FF"/>
+    <circle cx="790" cy="178" r="2.2" fill="#F5F9FF"/>
+    <circle cx="807" cy="288" r="1.8" fill="#7EB9FF"/>
+    <circle cx="658" cy="402" r="2.2" fill="#F5F9FF"/>
+    <circle cx="164" cy="392" r="2.2" fill="#F5F9FF"/>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <path d="M299 78C168 82 94 163 96 251C98 330 164 374 259 388C350 401 465 372 533 298C583 242 586 176 523 145C474 120 403 129 372 158C342 187 353 235 399 249C429 259 471 250 509 218" stroke="url(#silver)" stroke-width="84" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M303 80C178 83 92 170 94 253C96 333 170 386 260 393C348 400 468 367 533 298C584 244 588 179 520 146C471 121 406 128 372 159C339 188 349 236 399 247C431 254 476 247 511 215" stroke="#0B111C" stroke-width="3" opacity="0.6"/>
+  </g>
+
+  <g>
+    <path d="M179 274C212 329 266 348 326 353" stroke="url(#gold)" stroke-width="16" stroke-linecap="round" opacity="0.95"/>
+    <path d="M585 175C641 130 755 148 793 239" stroke="url(#gold)" stroke-width="18" stroke-linecap="round" opacity="0.9"/>
+    <path d="M355 222C430 245 495 291 520 378" stroke="url(#gold)" stroke-width="14" stroke-linecap="round" opacity="0.9"/>
+  </g>
+
+  <g>
+    <path d="M370 272C453 334 548 333 619 274C672 229 699 168 701 113" stroke="url(#silver)" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+    <path d="M234 318C321 350 407 354 462 330C516 305 566 262 608 213" stroke="url(#silver)" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  </g>
+
+  <g>
+    <ellipse cx="553" cy="219" rx="149" ry="149" fill="url(#glow)" opacity="0.85"/>
+    <circle cx="548" cy="218" r="146" fill="url(#blue)"/>
+    <circle cx="548" cy="218" r="140" fill="url(#blue)" stroke="rgba(255,255,255,.25)"/>
+    <path d="M560 95C615 107 651 136 684 173C715 208 714 253 681 286C652 314 612 335 564 336C513 337 471 311 441 271C415 236 408 197 428 165C460 118 505 95 560 95Z" fill="#0A1B2C" opacity="0.8"/>
+    <path d="M436 228C447 190 494 162 545 158C589 155 643 177 659 216C680 264 650 323 590 337C525 352 460 315 443 271C439 262 436 247 436 228Z" fill="#071B31" opacity="0.82"/>
+    <path d="M647 220C621 195 588 178 554 174C518 170 483 181 451 201C418 221 395 257 395 294C395 345 430 378 481 391C532 405 573 400 609 378C647 355 676 316 682 269C683 242 671 230 647 220Z" fill="#0D2D48" opacity="0.9"/>
+    <g opacity="0.82">
+      <path d="M447 255C471 242 496 238 521 240C550 242 576 255 594 271C569 281 503 304 470 298C453 295 436 281 447 255Z" fill="#3079C6" opacity="0.86"/>
+      <path d="M471 314C504 294 540 291 578 298C604 303 629 315 645 336C617 356 587 365 548 367C511 369 482 360 455 340C455 332 462 324 471 314Z" fill="#2E6DB5" opacity="0.82"/>
+      <path d="M565 148C597 149 643 164 671 190C640 200 611 196 584 189C575 169 565 158 565 148Z" fill="#3A87D5" opacity="0.75"/>
+      <path d="M612 252C635 250 663 262 681 282C647 294 625 297 596 290C582 267 594 261 612 252Z" fill="#1A5CAA" opacity="0.75"/>
+    </g>
+    <circle cx="548" cy="218" r="146" stroke="rgba(255,255,255,.16)"/>
+  </g>
+
+  <g opacity="0.9">
+    <circle cx="190" cy="334" r="16" fill="#8E99B2"/>
+    <circle cx="190" cy="334" r="7" fill="#E9EDF8"/>
+    <circle cx="216" cy="204" r="10" fill="#B4C3D7"/>
+    <circle cx="216" cy="204" r="4" fill="#F1F7FF"/>
+    <circle cx="736" cy="344" r="13" fill="#D9E5F7"/>
+    <circle cx="736" cy="344" r="5" fill="#FFFFFF"/>
+  </g>
+
+  <g>
+    <path d="M274 353C344 393 448 399 530 386C595 377 656 350 709 304" stroke="url(#silver)" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+    <path d="M79 327C104 357 144 375 189 383" stroke="url(#silver)" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+  </g>
+
+  <g filter="url(#textGlow)">
+    <text x="450" y="468" text-anchor="middle" font-size="118" font-weight="700" font-family="Segoe UI, Arial, sans-serif" letter-spacing="6" fill="url(#silver)">SOLARIS</text>
+    <text x="745" y="468" text-anchor="middle" font-size="118" font-weight="700" font-family="Segoe UI, Arial, sans-serif" letter-spacing="3" fill="url(#gold)">3D</text>
+  </g>
+</svg>
