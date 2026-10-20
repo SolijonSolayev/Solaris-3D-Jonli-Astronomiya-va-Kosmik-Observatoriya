@@ -1,0 +1,156 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="metal" x1="246" y1="96" x2="538" y2="376" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5F7FB"/>
+      <stop offset="0.32" stop-color="#DDE4F7"/>
+      <stop offset="0.62" stop-color="#AEB9D5"/>
+      <stop offset="1" stop-color="#F2F5FB"/>
+    </linearGradient>
+    <radialGradient id="planetGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(530 282) rotate(120) scale(190 190)">
+      <stop stop-color="#4AA6FF"/>
+      <stop offset="0.30" stop-color="#0B2E7A"/>
+      <stop offset="0.66" stop-color="#061D48"/>
+      <stop offset="1" stop-color="#020A15"/>
+    </radialGradient>
+    <radialGradient id="planetCore" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(540 280) rotate(120) scale(170 170)">
+      <stop offset="0.0" stop-color="#0F3B6E"/>
+      <stop offset="0.38" stop-color="#061A33"/>
+      <stop offset="0.7" stop-color="#020C1A"/>
+      <stop offset="1" stop-color="#01060B"/>
+    </radialGradient>
+    <linearGradient id="orbitBlue" x1="120" y1="60" x2="590" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A8E3FF"/>
+      <stop offset="0.18" stop-color="#EAF7FF"/>
+      <stop offset="0.46" stop-color="#5DB2FF"/>
+      <stop offset="0.72" stop-color="#7AB9FF"/>
+      <stop offset="1" stop-color="#DFF4FF"/>
+    </linearGradient>
+    <linearGradient id="orbitGold" x1="120" y1="260" x2="680" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF3B8"/>
+      <stop offset="0.2" stop-color="#FFD770"/>
+      <stop offset="0.58" stop-color="#FF9A1E"/>
+      <stop offset="1" stop-color="#FFF0B5"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="460" fill="#030812"/>
+
+  <g opacity="0.9">
+    <circle cx="72" cy="66" r="2.4" fill="#F0F7FF"/>
+    <circle cx="136" cy="97" r="2.2" fill="#F0F7FF"/>
+    <circle cx="210" cy="58" r="2.6" fill="#BFD9FF"/>
+    <circle cx="1040" cy="75" r="2.2" fill="#F0F7FF"/>
+    <circle cx="1092" cy="106" r="2.4" fill="#B8D7FF"/>
+    <circle cx="1138" cy="72" r="2.5" fill="#F7F1FF"/>
+    <circle cx="920" cy="162" r="2.5" fill="#CDE7FF"/>
+    <circle cx="90" cy="318" r="2.4" fill="#CDE7FF"/>
+    <circle cx="1110" cy="316" r="2.1" fill="#F6FBFF"/>
+    <circle cx="112" cy="410" r="2.7" fill="#B9E1FF"/>
+    <circle cx="1068" cy="390" r="2.3" fill="#F7FBFF"/>
+    <circle cx="850" cy="366" r="2.3" fill="#D7F0FF"/>
+  </g>
+
+  <g opacity="0.85">
+    <path d="M248 144C277 104 330 82 395 89C465 96 520 131 557 179C592 225 603 276 588 320C571 368 534 394 480 405C445 412 404 408 367 392C318 371 280 335 258 295" stroke="url(#orbitBlue)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M267 320C318 364 421 389 524 355C611 327 676 274 712 212" stroke="url(#orbitGold)" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <path d="M541 120C613 137 657 190 657 245C657 295 628 343 580 369C525 398 474 389 434 352C415 334 405 312 403 286C401 259 410 247 428 231C446 215 477 210 505 215C537 221 569 213 592 194C616 175 625 149 600 129C576 110 549 109 541 120Z" fill="url(#metal)" opacity="0.96"/>
+  </g>
+
+  <g>
+    <path d="M560 136C624 152 669 199 669 249C669 294 639 334 590 356C545 377 498 374 458 348C417 322 396 284 398 247C400 212 421 181 460 163C490 148 530 146 560 136Z" fill="url(#planetGlow)"/>
+    <path d="M551 136C610 150 646 188 650 235C653 278 631 320 592 345C555 370 499 370 450 343C423 326 405 302 399 271C393 243 398 217 421 190C449 157 501 133 551 136Z" fill="url(#planetCore)"/>
+    <ellipse cx="548" cy="240" rx="142" ry="136" fill="rgba(7,18,31,0.35)"/>
+    <circle cx="529" cy="222" r="94" fill="url(#planetGlow)" opacity="0.76"/>
+    <circle cx="525" cy="225" r="118" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="3"/>
+    <g opacity="0.78">
+      <path d="M456 228C495 210 535 214 587 241C566 268 542 284 514 286C488 287 467 273 456 228Z" fill="#4BA4FF" opacity="0.9"/>
+      <path d="M485 305C518 277 566 287 608 318C585 343 553 352 521 349C497 347 482 332 485 305Z" fill="#8ABFFF" opacity="0.75"/>
+      <path d="M471 185C492 160 518 148 550 149C534 177 521 197 501 209C487 217 471 208 471 185Z" fill="#B3DBFF" opacity="0.8"/>
+    </g>
+  </g>
+
+  <g>
+    <circle cx="330" cy="164" r="18" fill="#DDEEFF" opacity="0.8"/>
+    <circle cx="306" cy="118" r="3" fill="#FFF9D6"/>
+    <circle cx="339" cy="100" r="2.4" fill="#F3FBFF"/>
+    <circle cx="280" cy="160" r="3" fill="#F0F9FF"/>
+    <circle cx="672" cy="137" r="3.2" fill="#F0F9FF"/>
+    <circle cx="715" cy="170" r="3.6" fill="#CFE7FF"/>
+    <circle cx="772" cy="111" r="3" fill="#FFF9D6"/>
+    <circle cx="254" cy="334" r="2.5" fill="#D7F2FF"/>
+    <circle cx="734" cy="309" r="2.8" fill="#F8F5FF"/>
+    <circle cx="784" cy="270" r="2.5" fill="#F8F5FF"/>
+  </g>
+
+  <g>
+    <path d="M390 264C463 211 576 205 661 252C704 276 742 310 762 349" stroke="url(#orbitGold)" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+    <path d="M386 260C455 220 556 220 644 260C704 290 752 334 775 382" stroke="url(#orbitBlue)" stroke-width="5" stroke-linecap="round" opacity="0.95"/>
+  </g>
+
+  <circle cx="250" cy="364" r="11" fill="#D4E1EF" opacity="0.8"/>
+  <circle cx="800" cy="120" r="12" fill="#D9E4F5" opacity="0.8"/>
+
+  <g filter="url(#textGlow)">
+    <text x="600" y="420" text-anchor="middle" fill="#F6F8FC" font-size="120" font-weight="700" letter-spacing="2" font-family="Segoe UI, Arial, sans-serif">SOLARIS</text>
+    <text x="600" y="420" text-anchor="middle" fill="url(#orbitGold)" opacity="0.9" font-size="120" font-weight="700" letter-spacing="2" font-family="Segoe UI, Arial, sans-serif">SOLARIS</text>
+    <text x="600" y="420" text-anchor="middle" fill="#FFFFFF" font-size="120" font-weight="700" letter-spacing="2" font-family="Segoe UI, Arial, sans-serif" opacity="0.78">SOLARIS</text>
+    <text x="600" y="420" text-anchor="middle" fill="#D9E5FF" font-size="120" font-weight="700" letter-spacing="2" font-family="Segoe UI, Arial, sans-serif" opacity="0.76">SOLARIS</text>
+    <text x="600" y="430" text-anchor="middle" fill="#F5F8FD" font-size="74" font-weight="600" letter-spacing="12" font-family="Segoe UI, Arial, sans-serif" opacity="0.95">3D</text>
+  </g>
+</svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
