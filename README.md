@@ -1,4 +1,5 @@
 # Solaris 3D: Jonli Astronomiya va Kosmik Observatoriya
+https://solaris3d.uz/
 
 Solaris 3D — Yer, Oy va Quyoshning real-vaqt harakatini, tutilish yo‘llarini va kosmik observatoriya ma’lumotlarini interaktiv 3D ko‘rinishda ko‘rsatadigan loyiha.
 
