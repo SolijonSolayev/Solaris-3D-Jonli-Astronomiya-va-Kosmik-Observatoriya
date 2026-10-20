@@ -20,6 +20,7 @@ import { SkyViewPanel } from './components/SkyViewPanel';
 import { AttributionModal } from './components/AttributionModal';
 import { TotalityEffectsOverlay } from './components/TotalityEffectsOverlay';
 import { BioscienceModal } from './components/BioscienceModal';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   // Real-time live date ticking every 1 second
@@ -429,6 +430,9 @@ export default function App() {
         onClose={() => setIsBioscienceModalOpen(false)}
         selectedStation={activeStation}
       />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
