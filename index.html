@@ -29,6 +29,19 @@
             f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
             tp('register', 'VA6sycarfEz2J1hJ');
     </script>
+    <script> 
+	  document.addEventListener('DOMContentLoaded', function() {
+		const trustpilot_invitation = {
+   			recipientEmail: 'john@gmail.com',
+   			recipientName: 'John',
+   			referenceId: 'Order_123',
+   			source: 'InvitationScript',
+   			tags: ['tag_1'],
+   			locationId: 'location_1',
+  		};
+  		tp('createInvitation', trustpilot_invitation);
+	});
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
