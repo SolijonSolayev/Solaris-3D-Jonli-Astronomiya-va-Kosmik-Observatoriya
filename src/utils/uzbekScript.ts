@@ -48,12 +48,14 @@ const CYRILLIC_TO_LATIN: Record<string, string> = {
 };
 
 const LATIN_TO_CYRILLIC: [RegExp, string][] = [
+  [/(g|ğ)(?:ʻ|ʼ|'|‘|`)/gi, 'ғ'],
+  [/(o|ŏ)(?:ʻ|ʼ|'|‘|`)/gi, 'ў'],
+  [/ğ/gi, 'ғ'],
+  [/ŏ/gi, 'ў'],
   [/shch/gi, 'щ'],
   [/sh/gi, 'ш'],
   [/ch/gi, 'ч'],
   [/ng/gi, 'нг'],
-  [/(g|ğ|gʻ|gʼ|g'|g‘|g`)/gi, 'ғ'],
-  [/(o|ŏ|oʻ|oʼ|o'|o‘|o`)/gi, 'ў'],
   [/yo/gi, 'ё'],
   [/yu/gi, 'ю'],
   [/ya/gi, 'я'],
@@ -64,13 +66,15 @@ const LATIN_TO_CYRILLIC: [RegExp, string][] = [
   [/j/gi, 'ж'],
   [/a/gi, 'а'], [/b/gi, 'б'], [/d/gi, 'д'], [/e/gi, 'е'], [/f/gi, 'ф'],
   [/g/gi, 'г'], [/i/gi, 'и'], [/k/gi, 'к'], [/l/gi, 'л'], [/m/gi, 'м'],
-  [/n/gi, 'н'], [/p/gi, 'п'], [/r/gi, 'р'], [/s/gi, 'с'], [/t/gi, 'т'],
-  [/u/gi, 'у'], [/v/gi, 'в'], [/y/gi, 'й'], [/z/gi, 'з'],
+  [/n/gi, 'н'], [/o/gi, 'о'], [/p/gi, 'п'], [/r/gi, 'р'], [/s/gi, 'с'],
+  [/t/gi, 'т'], [/u/gi, 'у'], [/v/gi, 'в'], [/y/gi, 'й'], [/z/gi, 'з'],
 ];
 
 function toLatin(value: string, updated: boolean): string {
   const latin = Array.from(value, (character) => CYRILLIC_TO_LATIN[character] ?? character).join('');
-  return updated ? latin.replace(/gʻ/gi, (match) => preserveCase(match, 'ğ')).replace(/oʻ/gi, (match) => preserveCase(match, 'ŏ')) : latin;
+  return updated
+    ? latin.replace(/gʻ/gi, (match) => preserveCase(match, 'ğ')).replace(/oʻ/gi, (match) => preserveCase(match, 'ŏ'))
+    : latin;
 }
 
 function toCyrillic(value: string): string {
@@ -82,7 +86,6 @@ export function transliterateUzbek(value: string, script: UzbekScript): string {
   if (script === 'cyrillic') return toCyrillic(value);
   const latin = toLatin(value, script === 'updated-latin');
   if (script === 'updated-latin') return latin;
-  // Convert the modified letters of the proposed alphabet back to the currently used apostrophe form.
   return latin.replace(/ğ/gi, (match) => preserveCase(match, 'gʻ')).replace(/ŏ/gi, (match) => preserveCase(match, 'oʻ'));
 }
 
@@ -132,9 +135,7 @@ function applyTree(node: Node) {
   const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
   let text: Node | null;
   while ((text = walker.nextNode())) applyText(text as Text);
-  if (node instanceof Element) {
-    node.querySelectorAll('*').forEach(applyAttributes);
-  }
+  if (node instanceof Element) node.querySelectorAll('*').forEach(applyAttributes);
 }
 
 export function setUzbekScript(script: UzbekScript) {
