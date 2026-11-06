@@ -1,10 +1,18 @@
-import {StrictMode} from 'react';
-import {createRoot} from 'react-dom/client';
+import { StrictMode, Fragment } from 'react';
+import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
+import { UzbekScriptSelector } from './components/UzbekScriptSelector';
+import { observeUzbekScript } from './utils/uzbekScript';
 import './index.css';
 
-createRoot(document.getElementById('root')!).render(
+const rootElement = document.getElementById('root')!;
+observeUzbekScript(rootElement);
+
+createRoot(rootElement).render(
   <StrictMode>
-    <App />
+    <Fragment>
+      <App />
+      <UzbekScriptSelector />
+    </Fragment>
   </StrictMode>,
 );
